@@ -28,6 +28,7 @@ public class EchoClient {
         throws Exception {
         EventLoopGroup group = new NioEventLoopGroup();
         try {
+            // 创建 Bootstrap 用于快速引导客户端 Channel
             Bootstrap b = new Bootstrap();
             b.group(group)
                 .channel(NioSocketChannel.class)
